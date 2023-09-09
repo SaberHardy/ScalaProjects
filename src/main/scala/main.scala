@@ -12,11 +12,11 @@ def main(): Unit = {
   def forloopFruits(): Unit = {
     val fruits = List("Banana", "Apple", "Lime", "Orange")
 
-    val fruitLength = for
-      f <- fruits
-      if f.length > 4
-    yield
-      f.length
+    val fruitLength: Unit = for (f <- fruits) {
+      if (f.length >= 4) {
+        println(f)
+      }
+    }
   }
 
   print(forloopFruits())
