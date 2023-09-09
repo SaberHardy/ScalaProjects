@@ -23,6 +23,16 @@ def Collections(): Unit = {
   }
 
   val flattenLists = List(a, b).flatten
-  println(flattenLists)
+
+  // Type Casting
+  // Th order of casting is as follow
+  // Byte - Short - Int - Long - Float - Double
+  //                 |
+  //                Char
+
+  val x = 9
+  var y: Double = x
+
+  println(y.toFloat)
 
 }
