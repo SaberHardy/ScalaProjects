@@ -19,6 +19,35 @@ def main(): Unit = {
     }
   }
 
-  print(forloopFruits())
+  trait Speaker:
+    def speak(): String
+
+  trait TailWagger:
+    def startTail(): Unit = println("Tail is wagging")
+
+    def endTail(): Unit = println("Tail is stopped")
+
+  trait Runner:
+    def startRunning(): Unit = println("Start Running")
+
+    def endRunning(): Unit = println("End Running")
+
+  class Dog(name: String) extends Speaker, TailWagger, Runner:
+      def speak(): String = "Woof!"
+
+  class Cat(name: String) extends Speaker, TailWagger, Runner:
+      def speak(): String = "Meow!!"
+
+      override def startRunning(): Unit = println("The cat is not running!")
+
+      override def endRunning(): Unit = println("The cat is sleeping now!")
+
+
+  val dog = Dog("Rover!!")
+  println(dog.speak())
+
+  val cat = Cat("Michou")
+  println(dog.speak())
+
 }
 
