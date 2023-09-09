@@ -47,7 +47,16 @@ def main(): Unit = {
   println(dog.speak())
 
   val cat = Cat("Michou")
-  println(dog.speak())
+//  println(dog.speak())
+
+  class Person(var firstname: String, var lastname: String):
+    def printFullname(): Unit = {
+      println(s"Full name is: $firstname $lastname")
+    }
+
+  var person = Person("Saber","Bounehas")
+  person.printFullname()
 
 }
+
 
