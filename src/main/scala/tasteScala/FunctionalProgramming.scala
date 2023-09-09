@@ -1,5 +1,5 @@
 @main
-def TasteOfScala(): Unit = {
+def FunctionalProgramming(): Unit = {
   //  Class Function used in Scala
   /*
   * There are Three main of functional programming in scala
