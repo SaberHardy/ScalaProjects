@@ -33,30 +33,53 @@ def main(): Unit = {
     def endRunning(): Unit = println("End Running")
 
   class Dog(name: String) extends Speaker, TailWagger, Runner:
-      def speak(): String = "Woof!"
+    def speak(): String = "Woof!"
 
   class Cat(name: String) extends Speaker, TailWagger, Runner:
-      def speak(): String = "Meow!!"
+    def speak(): String = "Meow!!"
 
-      override def startRunning(): Unit = println("The cat is not running!")
+    override def startRunning(): Unit = println("The cat is not running!")
 
-      override def endRunning(): Unit = println("The cat is sleeping now!")
+    override def endRunning(): Unit = println("The cat is sleeping now!")
 
 
   val dog = Dog("Rover!!")
-  println(dog.speak())
+  //  println(dog.speak())
 
   val cat = Cat("Michou")
-//  println(dog.speak())
+  //  println(dog.speak())
 
   class Person(var firstname: String, var lastname: String):
     def printFullname(): Unit = {
       println(s"Full name is: $firstname $lastname")
     }
 
-  var person = Person("Saber","Bounehas")
-  person.printFullname()
+  //  var person = Person("Saber","Bounehas")
+  //  person.printFullname()
 
+  /* Pizza Sizes
+  * Suppose we have a pizza that has three main attributes
+  * Crust Size, Crust Type, Topping
+  *  */
+  enum CrustSize:
+    case Small, Medium, Large
+
+  enum CrustType:
+    case Thin, Thick, Regular
+
+  enum Topping:
+    case Cheese, Pepperoni, BlackOlives, Onions
+
+  import CrustSize.*
+
+  val currentPizzaSize = Small
+
+  currentPizzaSize match
+    case Small => println("Small Pizza")
+    case Medium => println("Medium Pizza")
+    case Large => println("Large Pizza")
+
+  if currentPizzaSize == Small then println("Small pizza ordered!")
 }
 
 
