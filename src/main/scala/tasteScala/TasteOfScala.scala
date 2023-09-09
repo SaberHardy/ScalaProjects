@@ -23,5 +23,12 @@ def TasteOfScala(): Unit = {
   val res1 = l1.map(func)
   val res2 = l2.map(func)
 
-  println()
+  // 2 Immutable collections
+  val numbers = (1 to 10).toList
+  println(numbers)
+   val x = numbers.filter(_ > 3)
+     .filter(_ < 8)
+     .map(_ * 5)
+
+  println(x)
 }
