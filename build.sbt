@@ -9,3 +9,4 @@ lazy val root = (project in file("."))
 
 libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
 libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.33"
+libraryDependencies += "org.scalafx" %% "scalafx" % "16.0.0-R24"
