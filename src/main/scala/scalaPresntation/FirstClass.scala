@@ -17,6 +17,13 @@ def main(): Unit = {
   //  println(doubledList)
 
 
+  //  def matchExample(x: Int): String = x match {
+  //    case 0 => "Zero"
+  //    case 1 => "One"
+  //    case _ => "Other"
+  //  }
+  //  println(matchExample(3))
+
 
 }
 
