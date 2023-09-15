@@ -35,22 +35,22 @@ def Collections(): Unit = {
   //
   //  println(y.toFloat)
 
-  def addTwoStrings(i: String, i1: String): String = {
-    var sum: String = ""
-    sum = i + i1
-    return sum
-  }
-
-  val i = 90
-  i match
-    case a if 0 to 9 contains a => println(s"0-9 range: $a")
-    case _ => println("Hmmm.....")
-
-  var text = ""
-
-  try
-    println(addTwoStrings(i="Hi, ", i1="Hello!"))
-  catch
-    case hi: Error => println("Said hi")
-    case hello: Error => println("Said hello!")
+  //  def addTwoStrings(i: String, i1: String): String = {
+  //    var sum: String = ""
+  //    sum = i + i1
+  //    return sum
+  //  }
+  //
+  //  val i = 90
+  //  i match
+  //    case a if 0 to 9 contains a => println(s"0-9 range: $a")
+  //    case _ => println("Hmmm.....")
+  //
+  //  var text = ""
+  //
+  //  try
+  //    println(addTwoStrings(i="Hi, ", i1="Hello!"))
+  //  catch
+  //    case hi: Error => println("Said hi")
+  //    case hello: Error => println("Said hello!")
 }

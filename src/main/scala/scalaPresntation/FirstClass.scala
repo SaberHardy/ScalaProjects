@@ -1,5 +1,7 @@
 package scalaPresntation
 
+import scala.util.{Failure, Success}
+
 @main
 def main(): Unit = {
   //  val add = (a: Int, b: Int) => a + b
@@ -29,6 +31,56 @@ def main(): Unit = {
   //    else n * factorial(n - 1)
   //  }
 
+  // Exceptions
+  //  try {
+  //    // Code that may throw an exception
+  //    val result = 10 / 0
+  //  } catch {
+  //    case e: ArithmeticException => println(s"ArithmeticException: ${e.getMessage}")
+  //    case ex: Exception => println(s"Generic Exception: ${ex.getMessage}")
+  //  } finally {
+  //    // Code that always executes, whether an exception occurred or not
+  //  }
+
+  //  Either
+  /*
+  * The Either type is used to represent values that can be one of two possible types:
+  * Left (often used for errors) or
+  * Right (often used for success).
+  * It's a more explicit way of handling errors than exceptions.
+  * */
+  //  def divide(x: Int, y: Int): Either[String, Double] = {
+  //    if (y == 0) Left("Cannot divide by zero")
+  //    else Right(x.toDouble / y)
+  //  }
+  //  val result = divide(10, 0) match {
+  //    case Right(value) => s"Result: $value"
+  //    case Left(error) => s"Error: $error"
+  //  }
+  //  println(result)
+
+  //  Try: The
+  //  Try
+  //  type is
+  //  used to handle exceptions in a more functional and predictable way.It wraps an expression that may
+  //  throw an exception and returns a Success
+  //  with the result or a Failure
+  //  with the exception.
+
+  //  import scala.util.Try
+  //
+  //  def parseToInt(str: String): Try[Int] = Try(str.toInt)
+  //
+  //  val result = parseToInt("42") match {
+  //    case Success(value) => value
+  //    case Failure(ex) => 0
+  //  }
+  //  println(result)
+
+  //  Custom Error Types
+  //  sealed trait MyError
+  //  case class NotFound(message: String) extends MyError
+  //  case class ValidationError(field: String, message: String) extends MyError
 
 }
 
