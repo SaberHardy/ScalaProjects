@@ -1,5 +1,7 @@
 package tasteScala
 
+import scala.math.Equiv
+
 @main
 def Collections(): Unit = {
   val a = List(13, 43, 5, 6, 8)
@@ -8,21 +10,21 @@ def Collections(): Unit = {
   val d = (1 until 20).toList
   val e = List.range(1, 5)
 
-  def printList(): Unit = {
-    // a.drop(2) // This delete the first two items
-    println(a.dropWhile(_ < 10))
-    println(c)
-    println(c.filter(_ < 10).slice(0, 2))
-    println(c.slice(2, 4))
-
-    // List d
-    println(d.tail)
-
-    // Take first three numbers
-    println(e.take(3))
-  }
-
-  val flattenLists = List(a, b).flatten
+  //  def printList(): Unit = {
+  //    // a.drop(2) // This delete the first two items
+  //    println(a.dropWhile(_ < 10))
+  //    println(c)
+  //    println(c.filter(_ < 10).slice(0, 2))
+  //    println(c.slice(2, 4))
+  //
+  //    // List d
+  //    println(d.tail)
+  //
+  //    // Take first three numbers
+  //    println(e.take(3))
+  //  }
+  //
+  //  val flattenLists = List(a, b).flatten
 
   // Type Casting
   // Th order of casting is as follow
@@ -53,4 +55,15 @@ def Collections(): Unit = {
   //  catch
   //    case hi: Error => println("Said hi")
   //    case hello: Error => println("Said hello!")
+  /**/
+  //  Different Lists
+  // lists with specific type
+  val ints: List[Int] = List(234, 4, 234, 3445, 456, 745756)
+  val strings: List[String] = List("First", "Second", "Third")
+
+  // Lists with different types
+  val mixedList: List[Int | String | Double] = List(12, 212, "First", 4.4)
+  println(mixedList)
+
+
 }
