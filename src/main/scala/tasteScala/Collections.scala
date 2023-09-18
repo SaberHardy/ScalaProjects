@@ -1,5 +1,6 @@
 package tasteScala
 
+import scala.collection.mutable.ArrayBuffer
 import scala.math.Equiv
 
 @main
@@ -58,12 +59,22 @@ def Collections(): Unit = {
   /**/
   //  Different Lists
   // lists with specific type
-  val ints: List[Int] = List(234, 4, 234, 3445, 456, 745756)
+  /*val ints: List[Int] = List(234, 4, 234, 3445, 456, 745756)
   val strings: List[String] = List("First", "Second", "Third")
 
   // Lists with different types
   val mixedList: List[Int | String | Double] = List(12, 212, "First", 4.4)
-  println(mixedList)
+  println(mixedList)*/
 
+  // Use ArrayBuffer
 
+  val nbrs: ArrayBuffer[Any] = ArrayBuffer(2, 4, 3, 7, 4, 35)
+
+  nbrs += 234 // Append at the end
+  nbrs ++= List(23, "sd")
+  println(nbrs)
+  nbrs --= Seq(4, 35, "sd")
+  println(nbrs)
 }
+
+// Adding elements to an ArrayBuffer
